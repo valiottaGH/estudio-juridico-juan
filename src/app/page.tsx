@@ -39,7 +39,7 @@ export default function LandingPage() {
             <h2 className="text-4xl font-bold mb-4 text-burgundy-600">Expertos en Accidentes de Tránsito y Asesoría Legal</h2>
             <p className="text-xl mb-8">Protegemos sus derechos y luchamos por la justicia que merece</p>
             <Button className="bg-burgundy-600 hover:bg-burgundy-700 text-black font-bold py-2 px-4 rounded">
-              Consulta Gratuita
+              Consulta 
             </Button>
           </div>
         </section>

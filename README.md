@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# estudio-juridico
+# Estudio Jurídico - Página Web
 
-## Getting Started
+## Descripción
 
-First, run the development server:
+Este proyecto es una página web para un estudio jurídico, donde los clientes pueden obtener información sobre los servicios ofrecidos y enviar consultas. La aplicación está construida con [Next.js](https://nextjs.org/), un framework de React, y se estiliza con [Tailwind CSS](https://tailwindcss.com/), un framework de CSS utilitario. Utiliza Node.js para el entorno de ejecución del servidor.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Características
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Información sobre el estudio jurídico.
+- Sección de servicios ofrecidos.
+- Formulario para enviar consultas.
+- Diseño responsivo y moderno.
+- Rápido y optimizado para SEO gracias a Next.js.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tecnologías Utilizadas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Node.js**: Entorno de ejecución de JavaScript del lado del servidor.
+- **Next.js**: Framework para React que permite la generación de sitios estáticos y la renderización del lado del servidor.
+- **JavaScript**: Lenguaje de programación utilizado para la lógica de la aplicación.
+- **Tailwind CSS**: Framework de CSS para crear diseños responsivos y personalizados de manera rápida.
+- **React**: Biblioteca para construir interfaces de usuario.
 
-## Learn More
+## Instalación
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clona el repositorio**:
+   ```bash
+   git clone https://github.com/valiottaGH/estudio-juridico.git
+   cd estudio-juridico-juan
