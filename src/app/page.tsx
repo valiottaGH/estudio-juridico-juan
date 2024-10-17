@@ -11,8 +11,6 @@ import LinkedInLogo from "@/components/iconos/linkedin"
 import React from "react";
 
 
-
-
 const urlWhatsapp = "https://wa.me/5491170011365?text=Escriba%20su%20consulta";
 export default function LandingPage() {
   return (
@@ -31,10 +29,25 @@ export default function LandingPage() {
             <h1 className="text-2xl font-bold">Estudio Liotta Juan Pablo & Asociados</h1>
           </div>
           <nav className="hidden md:flex space-x-4">
-            <Link href="#inicio" className="hover:text-gray-300">Inicio</Link>
-            <Link href="#servicios" className="hover:text-gray-300">Servicios</Link>
-            <Link href="#contacto" className="hover:text-gray-300">Contacto</Link>
-          </nav>
+  <Link
+    href="#inicio"
+    className="relative px-4 py-2 rounded-lg text-white transition duration-300 hover:bg-gray-300 hover:text-gray-800  transform"
+  >
+    Inicio
+  </Link>
+  <Link
+    href="#servicios"
+    className="relative px-4 py-2 rounded-lg text-white transition duration-300 hover:bg-gray-300 hover:text-gray-800"
+  >
+    Servicios
+  </Link>
+  <Link
+    href="#contacto"
+    className="relative px-4 py-2 rounded-lg text-white transition duration-300 hover:bg-gray-300 hover:text-gray-800"
+  >
+    Contacto
+  </Link>
+</nav>
           <Button className="md:hidden">Menú</Button>
         </div>
       </header>
@@ -46,7 +59,7 @@ export default function LandingPage() {
             <p className="text-xl text-white mb-8">Protegemos sus derechos y luchamos por la justicia que merece</p>
             
             <Link href={urlWhatsapp} target="_blank ">
-            <button className=" bg-green-500 text-white py-2 px-4 rounded shadow-lg transform transition-all duration-300 ease-in-out hover:shadow-xl hover:translate-y-1 hover:bg-green-600">Enviar consulta</button>
+            <button className=" bg-green-500 text-white py-2 px-4 rounded shadow-lg transform transition-all duration-300 ease-in-out hover:shadow-xl hover:translate-y-1 hover:bg-green-600">Enviar consulta via WhatsApp</button>
             </Link>
            
           </div>
@@ -88,6 +101,7 @@ export default function LandingPage() {
                   <Input name="enviar" type="submit" value={"enviar"} className="bg-blue-500 text-white font-bold py-2 px-4 rounded transition transform hover:scale-105 hover:bg-blue-600 hover:shadow-lg"/> 
                   <Input type="hidden" name="_next" value="http://localhost:3000"/>
                   <Input type="hidden" name="_subject" value="Nuevo caso!"/>
+                  <Input type="hidden" name="_captcha" value="false"/>
                 </form>
               </div>
               <div className="space-y-4">
