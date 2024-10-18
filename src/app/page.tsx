@@ -9,10 +9,27 @@ import Link from "next/link"
 import Image from "next/image"
 import LinkedInLogo from "@/components/iconos/linkedin"
 import React from "react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { useState } from "react"
+import { Menu } from "lucide-react"
+
+
 
 
 const urlWhatsapp = "https://wa.me/5491170011365?text=Escriba%20su%20consulta";
 export default function LandingPage() {
+
+  const menuItems = [
+    { href: '#inicio', label: 'Inicio' },
+    { href: '#servicios', label: 'Servicios' },
+    { href: '#contacto', label: 'Contacto' },
+  ]
+
+ const [isOpen, setIsOpen] = useState(false)
+
+ 
+
+
   return (
     /** header de la pagina */
     <div className="flex flex-col min-h-screen">
@@ -28,26 +45,40 @@ export default function LandingPage() {
             /> {/*agrega un contorno a la imagen */}
             <h1 className="text-2xl font-bold">Estudio Liotta Juan Pablo & Asociados</h1>
           </div>
-          <nav className="hidden md:flex space-x-4">
-  <Link
-    href="#inicio"
-    className="relative px-4 py-2 rounded-lg text-white transition duration-300 hover:bg-gray-300 hover:text-gray-800  transform"
-  >
-    Inicio
-  </Link>
-  <Link
-    href="#servicios"
-    className="relative px-4 py-2 rounded-lg text-white transition duration-300 hover:bg-gray-300 hover:text-gray-800"
-  >
-    Servicios
-  </Link>
-  <Link
-    href="#contacto"
-    className="relative px-4 py-2 rounded-lg text-white transition duration-300 hover:bg-gray-300 hover:text-gray-800"
-  >
-    Contacto
-  </Link>
-</nav>
+   <nav className="hidden md:flex space-x-4">
+   {menuItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="relative px-4 py-2 rounded-lg text-white transition duration-300 hover:bg-gray-300 hover:text-gray-800 transform"
+            >
+              {item.label}
+            </Link>
+          ))}
+    </nav>
+
+    <Sheet open={isOpen} onOpenChange={setIsOpen}>
+          <SheetTrigger asChild>
+            <Button variant="outline" size="icon" className="md:hidden">
+              <Menu className="h-6 w-6" />
+              <span className="sr-only">Abrir menú</span>
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+            <nav className="flex flex-col space-y-4 mt-6">
+              {menuItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="text-lg font-medium text-gray-900 hover:text-gray-600"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+          </SheetContent>
+        </Sheet>
         
         </div>
       </header>
