@@ -48,7 +48,7 @@ export default function LandingPage() {
     Contacto
   </Link>
 </nav>
-          <Button className="md:hidden">Menú</Button>
+        
         </div>
       </header>
       {/** presentacion */}
